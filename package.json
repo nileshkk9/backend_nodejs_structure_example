@@ -1,0 +1,40 @@
+{
+  "name": "user_service",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "cd ./src && nodemon app",
+    "start": "cd ./src && forever start app.js",
+    "lint": "gulp lint",
+    "test": "gulp test",
+    "cover": "nyc jasmine require=spec/specs/*.js",
+    "coverage": "gulp coverage",
+    "stop": "forever stopall"
+  },
+  "author": "ETA",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "gulp": "^4.0.2",
+    "gulp-eslint": "^6.0.0",
+    "gulp-mocha": "^7.0.2",
+    "gulp-shell": "^0.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "mocha-junit-reporter": "^2.0.0",
+    "mongoose": "^5.10.18",
+    "nodemon": "^2.0.7",
+    "nyc": "^15.1.0",
+    "validator": "^13.5.2",
+    "forever": "~0.15.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^8.2.1",
+    "supertest": "^6.0.1"
+  }
+}
